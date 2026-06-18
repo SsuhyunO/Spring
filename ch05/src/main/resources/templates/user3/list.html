@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user1::목록</title>
+		<title>user3::목록</title>
 	</head>
 	<body>
-		<h3>User1 목록</h3>
+		<h3>User3 목록</h3>
 		<a th:href="@{/}">메인</a>
-		<a th:href="@{/user1/register}">등록</a>
+		<a th:href="@{/user3/register}">등록</a>
 
 		<table border="1">
 			<tr>
@@ -15,7 +15,7 @@
 				<th>이름</th>
 				<th>생년월일</th>
 				<th>휴대폰</th>
-				<th>나이</th>
+				<th>주소</th>
 				<th>관리</th>
 			</tr>
 
@@ -24,10 +24,10 @@
 				<td>[[${dto.name}]]</td>
 				<td>[[${dto.birth}]]</td>
 				<td th:text="${dto.hp}">휴대폰</td>
-				<td th:text="${dto.age}">나이</td>
+				<td th:text="${dto.addr}">주소</td>
 				<td>
-					<a th:href="@{/user1/modify(userid=${dto.userid})}">수정</a>
-					<a th:href="@{/user1/delete(userid=${dto.userid})}">삭제</a>
+					<a th:href="@{/user3/modify(userid=${dto.userid})}">수정</a>
+					<a th:href="@{/user3/delete(userid=${dto.userid})}">삭제</a>
 				</td>
 			</tr>
 		</table>	
