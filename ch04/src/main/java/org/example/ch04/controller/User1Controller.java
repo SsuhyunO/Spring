@@ -1,8 +1,9 @@
-package org.example.ch05.controller;
+package org.example.ch04.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.ch05.dto.User1DTO;
-import org.example.ch05.service.User1Service;
+import lombok.extern.slf4j.Slf4j;
+import org.example.ch04.dto.User1DTO;
+import org.example.ch04.service.User1Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,11 +11,32 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+// Simple Log Facade For Java
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class User1Controller {
     // 주입 대상 속성에 final 선언해서 RequiredArgsConstructor 어노테이션으로 객체 주입(중요!!!)
     private final User1Service service;
+
+    @GetMapping("/log")
+    public String log(){
+        /*
+            로그 레벨
+            DEBUG - 가장 낮은 단계 레벨, 개발용으로 사용, 시스템(WAS)에서도 DEBUG 로그 출력하기 때문에 사용자 DEBUG 로그 사용 불편
+            INFO - 실질적으로 사용자가 사용하는 로그 레벨
+            WARN - 잠재적인 에러가 발생할 로직에 사용하는 로그 레벨
+            ERROR - 명백한 에러가 발생할 로직에 사용하는 로그 레벨
+         */
+
+
+        log.debug("log - debug...");
+        log.info("log - info...");
+        log.warn("log - warn...");
+        log.error("log - error...");
+
+        return "redirect:/";
+    }
 
     @GetMapping("/user1/list")
     public String list(Model model){
@@ -36,7 +58,8 @@ public class User1Controller {
 
     @PostMapping("/user1/register")
     public String register(User1DTO dto){
-        System.out.println(dto);
+        // System.out.println(dto);
+        log.debug(dto.toString());
 
         // 등록 서비스 호출
         service.register(dto);
@@ -56,7 +79,8 @@ public class User1Controller {
 
     @PostMapping("/user1/modify")
     public String modify(User1DTO dto){
-        System.out.println(dto);
+        // System.out.println(dto);
+        log.debug(dto.toString());
 
         service.modify(dto);
 

@@ -1,12 +1,12 @@
-package org.example.ch05.dao;
+package org.example.ch04.dao;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.example.ch05.dto.User1DTO;
+import org.example.ch04.dto.User1DTO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-// @Mapper는 ㄱMyBatis API 호출 컴포넌트 선언
+// @Mapper는 MyBatis API 호출 컴포넌트 선언
 @Mapper
 @Repository
 public interface User1DAO {

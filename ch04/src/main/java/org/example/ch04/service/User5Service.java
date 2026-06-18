@@ -1,8 +1,8 @@
-package org.example.ch05.service;
+package org.example.ch04.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.ch05.dao.User5DAO;
-import org.example.ch05.dto.User5DTO;
+import org.example.ch04.dao.User5DAO;
+import org.example.ch04.dto.User5DTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

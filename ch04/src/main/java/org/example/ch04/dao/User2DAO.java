@@ -1,7 +1,7 @@
-package org.example.ch05.dao;
+package org.example.ch04.dao;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.example.ch05.dto.User2DTO;
+import org.example.ch04.dto.User2DTO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

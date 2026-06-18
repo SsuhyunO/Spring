@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.example.ch05.dao.User3DAO">
+<mapper namespace="org.example.ch04.dao.User3DAO">
 
     <insert id="insert">
         INSERT INTO User3 SET
@@ -13,11 +13,11 @@
                             addr=#{addr};
     </insert>
 
-    <select id="select" resultType="org.example.ch05.dto.User3DTO">
+    <select id="select">
         SELECT * FROM User3 WHERE userid=#{userid};
     </select>
 
-    <select id="selectAll" resultType="org.example.ch05.dto.User3DTO">
+    <select id="selectAll">
         SELECT * FROM User3;
     </select>
 

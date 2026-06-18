@@ -1,0 +1,734 @@
+2026-06-18T09:50:22.762+09:00  INFO 7660 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : Starting Ch04ApplicationTests using Java 21.0.11 with PID 7660 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:50:22.763+09:00  INFO 7660 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:50:23.801+09:00  INFO 7660 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T09:50:24.126+09:00  INFO 7660 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : Started Ch04ApplicationTests in 1.646 seconds (process running for 2.857)
+2026-06-18T09:50:50.588+09:00  INFO 4556 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Starting Ch04Application using Java 21.0.11 with PID 4556 (C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:50:50.590+09:00  INFO 4556 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:50:50.626+09:00  INFO 4556 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-18T09:50:50.626+09:00  INFO 4556 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-18T09:50:51.420+09:00  INFO 4556 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-18T09:50:51.432+09:00  INFO 4556 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T09:50:51.432+09:00  INFO 4556 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-18T09:50:51.464+09:00  INFO 4556 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2026-06-18T09:50:51.464+09:00  INFO 4556 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 838 ms
+2026-06-18T09:50:51.649+09:00  INFO 4556 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T09:50:51.881+09:00  INFO 4556 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-18T09:50:51.907+09:00  INFO 4556 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2026-06-18T09:50:51.914+09:00  INFO 4556 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Started Ch04Application in 1.715 seconds (process running for 2.307)
+2026-06-18T09:50:59.096+09:00  INFO 4556 --- [ch04] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T09:50:59.097+09:00  INFO 4556 --- [ch04] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T09:50:59.098+09:00  INFO 4556 --- [ch04] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-18T09:51:01.037+09:00 ERROR 4556 --- [ch04] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/ch04] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): org.example.ch04.dao.User1DAO.selectAll] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): org.example.ch04.dao.User1DAO.selectAll
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96) ~[mybatis-3.5.19.jar:3.5.19]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.19.jar:3.5.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy69.selectAll(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.19.jar:6.2.19]
+	at jdk.proxy3/jdk.proxy3.$Proxy70.selectAll(Unknown Source) ~[na:na]
+	at org.example.ch04.service.User1Service.getAll(User1Service.java:26) ~[main/:na]
+	at org.example.ch04.controller.User1Controller.list(User1Controller.java:45) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-18T09:53:12.599+09:00  INFO 4556 --- [ch04] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 27 class path changes (5 additions, 5 deletions, 17 modifications)
+2026-06-18T09:53:12.602+09:00  INFO 4556 --- [ch04] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T09:53:12.605+09:00  INFO 4556 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T09:53:12.676+09:00  INFO 4556 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Starting Ch04Application using Java 21.0.11 with PID 4556 (C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:53:12.676+09:00  INFO 4556 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:53:12.892+09:00  INFO 4556 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-18T09:53:12.893+09:00  INFO 4556 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T09:53:12.893+09:00  INFO 4556 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-18T09:53:12.906+09:00  INFO 4556 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2026-06-18T09:53:12.906+09:00  INFO 4556 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2026-06-18T09:53:13.009+09:00  WARN 4556 --- [ch04] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+2026-06-18T09:53:13.010+09:00  INFO 4556 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T09:53:13.014+09:00  INFO 4556 --- [ch04] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T09:53:13.029+09:00 ERROR 4556 --- [ch04] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.example.ch04.Ch04Application.main(Ch04Application.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.15.jar:3.5.15]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1723) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1472) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 52 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1715) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 62 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 75 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:98) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	... 84 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:133) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.19.jar:3.5.19]
+	... 86 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.5.19.jar:3.5.19]
+	... 90 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124) ~[mybatis-3.5.19.jar:3.5.19]
+	... 92 common frames omitted
+
+2026-06-18T09:53:33.126+09:00  INFO 4276 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Starting Ch04Application using Java 21.0.11 with PID 4276 (C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:53:33.128+09:00  INFO 4276 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:53:33.162+09:00  INFO 4276 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-18T09:53:33.162+09:00  INFO 4276 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-18T09:53:33.994+09:00  INFO 4276 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-18T09:53:34.007+09:00  INFO 4276 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T09:53:34.007+09:00  INFO 4276 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-18T09:53:34.038+09:00  INFO 4276 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2026-06-18T09:53:34.038+09:00  INFO 4276 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2026-06-18T09:53:34.232+09:00  WARN 4276 --- [ch04] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+2026-06-18T09:53:34.234+09:00  INFO 4276 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T09:53:34.244+09:00  INFO 4276 --- [ch04] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T09:53:34.262+09:00 ERROR 4276 --- [ch04] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.example.ch04.Ch04Application.main(Ch04Application.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.15.jar:3.5.15]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1723) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1472) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 52 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1715) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 62 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 75 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:98) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	... 84 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:133) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.19.jar:3.5.19]
+	... 86 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.5.19.jar:3.5.19]
+	... 90 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124) ~[mybatis-3.5.19.jar:3.5.19]
+	... 92 common frames omitted
+
+2026-06-18T09:54:35.340+09:00  INFO 4728 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Starting Ch04Application using Java 21.0.11 with PID 4728 (C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:54:35.342+09:00  INFO 4728 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:54:35.376+09:00  INFO 4728 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-18T09:54:35.376+09:00  INFO 4728 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-18T09:54:36.181+09:00  INFO 4728 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-18T09:54:36.192+09:00  INFO 4728 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T09:54:36.193+09:00  INFO 4728 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-18T09:54:36.225+09:00  INFO 4728 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2026-06-18T09:54:36.225+09:00  INFO 4728 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 848 ms
+2026-06-18T09:54:36.412+09:00  WARN 4728 --- [ch04] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+2026-06-18T09:54:36.415+09:00  INFO 4728 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-18T09:54:36.427+09:00  INFO 4728 --- [ch04] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-18T09:54:36.446+09:00 ERROR 4728 --- [ch04] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Controller' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\controller\User1Controller.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628) ~[spring-context-6.2.19.jar:6.2.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.15.jar:3.5.15]
+	at org.example.ch04.Ch04Application.main(Ch04Application.java:10) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.15.jar:3.5.15]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'user1Service' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\service\User1Service.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user1DAO' defined in file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main\org\example\ch04\dao\User1DAO.class]: Cannot resolve reference to bean 'sqlSessionTemplate' while setting bean property 'sqlSessionTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1723) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1472) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionTemplate' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionTemplate' parameter 0: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 52 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1715) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 62 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.19.jar:6.2.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 75 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:695) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:572) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:712) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189) ~[mybatis-spring-boot-autoconfigure-3.0.5.jar:3.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.19.jar:6.2.19]
+	... 78 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\resources\main\mappers\user2.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:98) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:693) ~[mybatis-spring-3.0.5.jar:3.0.5]
+	... 84 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:141) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:133) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123) ~[mybatis-3.5.19.jar:3.5.19]
+	... 86 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.example.ch05.dto.User2DTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101) ~[mybatis-3.5.19.jar:3.5.19]
+	... 90 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: org.example.ch05.dto.User2DTO
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322) ~[mybatis-3.5.19.jar:3.5.19]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124) ~[mybatis-3.5.19.jar:3.5.19]
+	... 92 common frames omitted
+
+2026-06-18T09:55:23.155+09:00  INFO 2532 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Starting Ch04Application using Java 21.0.11 with PID 2532 (C:\Users\GGG\Desktop\Workspace\Spring\ch04\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T09:55:23.157+09:00  INFO 2532 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T09:55:23.190+09:00  INFO 2532 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-18T09:55:23.190+09:00  INFO 2532 --- [ch04] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-18T09:55:23.954+09:00  INFO 2532 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-18T09:55:23.966+09:00  INFO 2532 --- [ch04] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-18T09:55:23.967+09:00  INFO 2532 --- [ch04] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-18T09:55:23.998+09:00  INFO 2532 --- [ch04] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring embedded WebApplicationContext
+2026-06-18T09:55:23.998+09:00  INFO 2532 --- [ch04] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 807 ms
+2026-06-18T09:55:24.268+09:00  INFO 2532 --- [ch04] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T09:55:24.508+09:00  INFO 2532 --- [ch04] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-18T09:55:24.536+09:00  INFO 2532 --- [ch04] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/ch04'
+2026-06-18T09:55:24.543+09:00  INFO 2532 --- [ch04] [restartedMain] org.example.ch04.Ch04Application         : Started Ch04Application in 1.794 seconds (process running for 2.294)
+2026-06-18T09:55:31.360+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/ch04]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-18T09:55:31.360+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-18T09:55:31.361+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-18T09:55:32.821+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T09:55:33.073+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18edc10c
+2026-06-18T09:55:33.075+09:00  INFO 2532 --- [ch04] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:03:16.812+09:00  INFO 2532 --- [ch04] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-18T10:03:16.815+09:00  INFO 2532 --- [ch04] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-06-18T10:03:16.820+09:00  INFO 2532 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:03:16.824+09:00  INFO 2532 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:03:28.628+09:00  INFO 12000 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : Starting Ch04ApplicationTests using Java 21.0.11 with PID 12000 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:03:28.631+09:00  INFO 12000 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:03:29.775+09:00  INFO 12000 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:03:30.110+09:00  INFO 12000 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : Started Ch04ApplicationTests in 1.803 seconds (process running for 2.921)
+2026-06-18T10:03:30.702+09:00  INFO 12000 --- [ch04] [Test worker] org.example.ch04.Ch04ApplicationTests    : contextLoads
+2026-06-18T10:12:41.951+09:00  INFO 9156 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 9156 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:12:41.952+09:00  INFO 9156 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:12:43.093+09:00  INFO 9156 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:12:43.451+09:00  INFO 9156 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.772 seconds (process running for 2.893)
+2026-06-18T10:12:44.091+09:00  INFO 9156 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:12:44.454+09:00  INFO 9156 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bef7505
+2026-06-18T10:12:44.457+09:00  INFO 9156 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:12:44.549+09:00  INFO 9156 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:12:44.553+09:00  INFO 9156 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:16:24.841+09:00  INFO 11148 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 11148 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:16:24.842+09:00  INFO 11148 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:16:26.018+09:00  INFO 11148 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:16:26.394+09:00  INFO 11148 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.839 seconds (process running for 2.958)
+2026-06-18T10:16:27.042+09:00  INFO 11148 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:16:27.399+09:00  INFO 11148 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b45500
+2026-06-18T10:16:27.402+09:00  INFO 11148 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:16:27.512+09:00  INFO 11148 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:16:27.579+09:00  INFO 11148 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:21:12.477+09:00  INFO 6276 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 6276 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:21:12.479+09:00  INFO 6276 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:21:13.589+09:00  INFO 6276 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:21:13.935+09:00  INFO 6276 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.736 seconds (process running for 2.84)
+2026-06-18T10:21:14.621+09:00  INFO 6276 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:21:14.965+09:00  INFO 6276 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@787a0fd6
+2026-06-18T10:21:14.967+09:00  INFO 6276 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:21:15.011+09:00  INFO 6276 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : User1DTO(userid=A101, name=이순신, birth=2026-06-09, hp=010-1234-1111, age=43)
+2026-06-18T10:21:15.045+09:00  INFO 6276 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:21:15.049+09:00  INFO 6276 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:25:17.272+09:00  INFO 1628 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 1628 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:25:17.273+09:00  INFO 1628 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:25:18.414+09:00  INFO 1628 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:25:18.789+09:00  INFO 1628 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.793 seconds (process running for 2.891)
+2026-06-18T10:25:19.425+09:00  INFO 1628 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:25:19.776+09:00  INFO 1628 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1618c98a
+2026-06-18T10:25:19.779+09:00  INFO 1628 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:25:19.861+09:00  INFO 1628 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:25:19.866+09:00  INFO 1628 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:29:35.630+09:00  INFO 8992 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 8992 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:29:35.631+09:00  INFO 8992 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:29:36.785+09:00  INFO 8992 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:29:37.140+09:00  INFO 8992 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.786 seconds (process running for 2.905)
+2026-06-18T10:29:37.847+09:00  INFO 8992 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:29:38.219+09:00  INFO 8992 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b3a8455
+2026-06-18T10:29:38.222+09:00  INFO 8992 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:29:38.345+09:00  INFO 8992 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:29:38.390+09:00  INFO 8992 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:31:19.215+09:00  INFO 2060 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 2060 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:31:19.216+09:00  INFO 2060 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:31:20.352+09:00  INFO 2060 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:31:20.675+09:00  INFO 2060 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.742 seconds (process running for 2.847)
+2026-06-18T10:31:21.326+09:00  INFO 2060 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:31:21.660+09:00  INFO 2060 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41492479
+2026-06-18T10:31:21.662+09:00  INFO 2060 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:31:21.766+09:00  INFO 2060 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:31:21.772+09:00  INFO 2060 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:34:37.171+09:00  INFO 9264 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 9264 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:34:37.172+09:00  INFO 9264 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:34:38.333+09:00  INFO 9264 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:34:38.647+09:00  INFO 9264 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.75 seconds (process running for 2.841)
+2026-06-18T10:34:39.267+09:00  INFO 9264 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:34:39.606+09:00  INFO 9264 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6144e499
+2026-06-18T10:34:39.608+09:00  INFO 9264 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:34:39.709+09:00  INFO 9264 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : User1DTO(userid=test01, name=테스트, birth=2000-01-01, hp=010-1111-2222, age=77)
+2026-06-18T10:34:39.738+09:00  INFO 9264 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:34:39.785+09:00  INFO 9264 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:36:39.352+09:00  INFO 2556 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 2556 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:36:39.354+09:00  INFO 2556 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:36:40.526+09:00  INFO 2556 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:36:40.859+09:00  INFO 2556 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.779 seconds (process running for 2.884)
+2026-06-18T10:36:41.505+09:00  INFO 2556 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:36:41.850+09:00  INFO 2556 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e67d3b7
+2026-06-18T10:36:41.852+09:00  INFO 2556 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:36:41.965+09:00  INFO 2556 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : User1DTO(userid=test01, name=테스트, birth=2000-01-01, hp=010-1111-2222, age=77)
+2026-06-18T10:36:41.994+09:00  INFO 2556 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:36:42.036+09:00  INFO 2556 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:37:43.710+09:00  INFO 11708 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 11708 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:37:43.712+09:00  INFO 11708 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:37:44.839+09:00  INFO 11708 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:37:45.157+09:00  INFO 11708 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.721 seconds (process running for 2.85)
+2026-06-18T10:37:45.785+09:00  INFO 11708 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:37:46.134+09:00  INFO 11708 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a5d5b38
+2026-06-18T10:37:46.136+09:00  INFO 11708 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:37:46.219+09:00  INFO 11708 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : User1DTO(userid=test01, name=테스트, birth=2000-01-01, hp=010-1111-2222, age=77)
+2026-06-18T10:37:46.273+09:00  INFO 11708 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:37:46.306+09:00  INFO 11708 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T10:41:55.638+09:00  INFO 10964 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Starting User1DAOTest using Java 21.0.11 with PID 10964 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T10:41:55.640+09:00  INFO 10964 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T10:41:56.792+09:00  INFO 10964 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T10:41:57.096+09:00  INFO 10964 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : Started User1DAOTest in 1.732 seconds (process running for 2.873)
+2026-06-18T10:41:57.722+09:00  INFO 10964 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T10:41:58.077+09:00  INFO 10964 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a5d5b38
+2026-06-18T10:41:58.079+09:00  INFO 10964 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T10:41:58.161+09:00  INFO 10964 --- [ch04] [Test worker] org.example.ch04.dao.User1DAOTest        : User1DTO(userid=test01, name=테스트, birth=2000-01-01, hp=010-1111-2222, age=77)
+2026-06-18T10:41:58.211+09:00  INFO 10964 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T10:41:58.255+09:00  INFO 10964 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T11:12:44.211+09:00  INFO 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 7668 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:12:44.213+09:00  INFO 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:12:45.389+09:00  INFO 7668 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:12:45.710+09:00  INFO 7668 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:12:45.711+09:00  INFO 7668 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:12:45.712+09:00  INFO 7668 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:12:45.740+09:00  INFO 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.861 seconds (process running for 4.386)
+2026-06-18T11:12:46.342+09:00  INFO 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - info...
+2026-06-18T11:12:46.342+09:00  WARN 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - warn...
+2026-06-18T11:12:46.343+09:00 ERROR 7668 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - error...
+2026-06-18T11:13:25.042+09:00  INFO 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 1920 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:13:25.044+09:00  INFO 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:13:26.178+09:00  INFO 1920 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:13:26.540+09:00  INFO 1920 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:13:26.540+09:00  INFO 1920 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:13:26.542+09:00  INFO 1920 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-06-18T11:13:26.576+09:00  INFO 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.829 seconds (process running for 2.941)
+2026-06-18T11:13:27.239+09:00  INFO 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - info...
+2026-06-18T11:13:27.240+09:00  WARN 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - warn...
+2026-06-18T11:13:27.240+09:00 ERROR 1920 --- [ch04] [Test worker] o.e.ch04.controller.User1Controller      : log - error...
+2026-06-18T11:18:17.643+09:00  INFO 9288 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 9288 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:18:17.644+09:00  INFO 9288 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:18:18.788+09:00  INFO 9288 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:18:19.102+09:00  INFO 9288 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:18:19.103+09:00  INFO 9288 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:18:19.104+09:00  INFO 9288 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:18:19.137+09:00  INFO 9288 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.79 seconds (process running for 2.912)
+2026-06-18T11:18:19.830+09:00  INFO 9288 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T11:18:20.178+09:00  INFO 9288 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4af606e9
+2026-06-18T11:18:20.180+09:00  INFO 9288 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T11:18:20.563+09:00  INFO 9288 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T11:18:20.586+09:00  INFO 9288 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T11:23:57.031+09:00  INFO 5240 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 5240 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:23:57.033+09:00  INFO 5240 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:23:58.166+09:00  INFO 5240 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:23:58.478+09:00  INFO 5240 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:23:58.479+09:00  INFO 5240 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:23:58.480+09:00  INFO 5240 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:23:58.514+09:00  INFO 5240 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.772 seconds (process running for 2.884)
+2026-06-18T11:23:59.274+09:00  INFO 5240 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T11:23:59.647+09:00  INFO 5240 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@414d2821
+2026-06-18T11:23:59.650+09:00  INFO 5240 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T11:23:59.753+09:00  INFO 5240 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T11:23:59.760+09:00  INFO 5240 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T11:26:03.037+09:00  INFO 1364 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 1364 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:26:03.038+09:00  INFO 1364 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:26:04.174+09:00  INFO 1364 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:26:04.503+09:00  INFO 1364 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:26:04.504+09:00  INFO 1364 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:26:04.505+09:00  INFO 1364 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:26:04.544+09:00  INFO 1364 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.794 seconds (process running for 2.897)
+2026-06-18T11:26:05.285+09:00  INFO 1364 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T11:26:05.662+09:00  INFO 1364 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b2acb12
+2026-06-18T11:26:05.664+09:00  INFO 1364 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T11:26:05.762+09:00  INFO 1364 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T11:26:05.768+09:00  INFO 1364 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T11:27:11.407+09:00  INFO 9148 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 9148 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:27:11.409+09:00  INFO 9148 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:27:12.567+09:00  INFO 9148 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:27:12.884+09:00  INFO 9148 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:27:12.884+09:00  INFO 9148 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:27:12.886+09:00  INFO 9148 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:27:12.915+09:00  INFO 9148 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.793 seconds (process running for 2.914)
+2026-06-18T11:27:13.640+09:00  INFO 9148 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T11:27:14.001+09:00  INFO 9148 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17c34e62
+2026-06-18T11:27:14.005+09:00  INFO 9148 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T11:27:51.915+09:00  INFO 9148 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T11:27:51.922+09:00  INFO 9148 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-18T11:30:15.575+09:00  INFO 7936 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 7936 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:30:15.578+09:00  INFO 7936 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:30:16.717+09:00  INFO 7936 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:30:17.017+09:00  INFO 7936 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:30:17.018+09:00  INFO 7936 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:30:17.019+09:00  INFO 7936 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:30:17.047+09:00  INFO 7936 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.762 seconds (process running for 2.889)
+2026-06-18T11:32:48.597+09:00  INFO 5368 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Starting User1ControllerTest using Java 21.0.11 with PID 5368 (started by GGG in C:\Users\GGG\Desktop\Workspace\Spring\ch04)
+2026-06-18T11:32:48.599+09:00  INFO 5368 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2026-06-18T11:32:49.745+09:00  INFO 5368 --- [ch04] [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-06-18T11:32:50.054+09:00  INFO 5368 --- [ch04] [Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-06-18T11:32:50.055+09:00  INFO 5368 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-06-18T11:32:50.056+09:00  INFO 5368 --- [ch04] [Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-06-18T11:32:50.102+09:00  INFO 5368 --- [ch04] [Test worker] o.e.ch04.controller.User1ControllerTest  : Started User1ControllerTest in 1.801 seconds (process running for 2.945)
+2026-06-18T11:32:50.793+09:00  INFO 5368 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-18T11:32:51.136+09:00  INFO 5368 --- [ch04] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cc44207
+2026-06-18T11:32:51.139+09:00  INFO 5368 --- [ch04] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-18T11:33:27.384+09:00  INFO 5368 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-18T11:33:27.391+09:00  INFO 5368 --- [ch04] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

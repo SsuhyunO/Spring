@@ -1,8 +1,8 @@
-package org.example.ch05.controller;
+package org.example.ch04.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.ch05.dto.User3DTO;
-import org.example.ch05.service.User3Service;
+import org.example.ch04.dto.User3DTO;
+import org.example.ch04.service.User3Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
