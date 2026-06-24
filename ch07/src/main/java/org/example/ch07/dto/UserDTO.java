@@ -1,0 +1,33 @@
+package org.example.ch07.dto;
+
+import lombok.*;
+import org.example.ch07.entity.User;
+
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
+public class UserDTO {
+    private String userid;
+    private String pass;
+    private String name;
+    private String birth;
+    private int age;
+    private String role; // 권한
+    private String rdate;
+
+    public User toEntity(){
+        return User.builder()
+                .userid(userid)
+                .pass(pass)
+                .name(name)
+                .birth(birth)
+                .age(age)
+                .role(role)
+                .build();
+    }
+}
