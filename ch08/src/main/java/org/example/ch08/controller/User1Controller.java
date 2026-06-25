@@ -64,6 +64,20 @@ public class User1Controller {
                 .body(dtoList);
     }
 
+    @GetMapping("/user1/{userid}")
+    public ResponseEntity<User1DTO> view(@PathVariable("userid") String userid){
+        log.info(userid);
+
+        User1DTO dto = service.getUser(userid);
+
+        if(dto != null){
+            return ResponseEntity.ok(dto);
+        }
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .build();
+    }
+
     // @ResponseBody
     @PutMapping("/user1")
     public ResponseEntity<User1DTO> modify(@RequestBody User1DTO dto){
