@@ -8,6 +8,7 @@ import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.Getter;
 import org.example.ch09.entity.User;
+import org.example.ch09.security.MyUserDetails;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -69,7 +70,11 @@ public class JwtProvider {
                 .role(role)
                 .build();
 
-        return new UsernamePasswordAuthenticationToken(user, token);
+        MyUserDetails details = MyUserDetails.builder()
+                                    .user(user)
+                                    .build();
+
+        return new UsernamePasswordAuthenticationToken(details, token, details.getAuthorities());
     }
 
     public void validateToken(String token){
